@@ -16,14 +16,14 @@ Repositori ini telah dikonfigurasi dan dipersiapkan sesuai dengan seluruh ketent
 
 ### 2. Database MySQL
 - Server MySQL telah berjalan di XAMPP (`3306`).
-- Telah disiapkan database kosong bernama: `db_ujian_framework`
+- Telah disiapkan database kosong bernama: `ujian_framework`
 - Konfigurasi koneksi telah disetting pada file `.env`:
   ```ini
   CI_ENVIRONMENT = development
   app.baseURL = 'http://localhost:8080/'
 
   database.default.hostname = localhost
-  database.default.database = db_ujian_framework
+  database.default.database = ujian_framework
   database.default.username = root
   database.default.password = 
   database.default.DBDriver = MySQLi

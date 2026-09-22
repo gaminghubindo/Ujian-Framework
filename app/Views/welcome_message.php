@@ -7,7 +7,7 @@ Dashboard Persiapan Ujian Framework
 <?= $this->section('content') ?>
 <?php
 $dbConnected = false;
-$dbName = config('Database')->default['database'] ?? 'db_ujian_framework';
+$dbName = config('Database')->default['database'] ?? 'ujian_framework';
 $dbError = '';
 $tableCount = 0;
 try {
