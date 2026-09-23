@@ -69,6 +69,7 @@
                         <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400 text-sm font-bold">Rp</span>
                         <input type="number" name="harga" id="harga" value="<?= old('harga', $menu['harga'] ?? '') ?>" required min="0" step="500" placeholder="25000" class="w-full pl-11 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition">
                     </div>
+                    <p class="text-[11px] text-slate-400 mt-1">Masukkan angka tanpa titik atau koma</p>
                 </div>
 
                 <div>

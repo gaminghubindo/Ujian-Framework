@@ -107,15 +107,35 @@
                 <!-- Actions -->
                 <div class="flex items-center gap-3">
                     <?php if (session()->get('is_admin')): ?>
-                        <a href="<?= base_url('admin/dashboard') ?>" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 text-white hover:bg-slate-800 text-sm font-semibold shadow-md transition transform active:scale-95">
+                        <a href="<?= base_url('admin/dashboard') ?>" class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 text-white hover:bg-slate-800 text-sm font-semibold shadow-md transition transform active:scale-95">
                             <svg class="w-4 h-4 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
                             <span>Panel Admin</span>
                         </a>
                     <?php else: ?>
-                        <a href="<?= base_url('admin/login') ?>" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-brand-500 text-white hover:bg-brand-600 text-sm font-semibold shadow-md shadow-brand-500/25 transition transform active:scale-95">
+                        <a href="<?= base_url('admin/login') ?>" class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-brand-500 text-white hover:bg-brand-600 text-sm font-semibold shadow-md shadow-brand-500/25 transition transform active:scale-95">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
                             <span>Login Admin</span>
                         </a>
+                    <?php endif; ?>
+
+                    <!-- Mobile Hamburger Button -->
+                    <button type="button" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" class="md:hidden p-2.5 rounded-xl bg-slate-100 text-slate-700 hover:bg-slate-200 transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Drawer Menu -->
+            <div id="mobileMenu" class="hidden md:hidden py-4 border-t border-slate-100 space-y-3">
+                <a href="<?= base_url() ?>#beranda" class="block py-2 text-sm font-semibold text-slate-700 hover:text-brand-500 transition">Beranda</a>
+                <a href="<?= base_url() ?>#menu" class="block py-2 text-sm font-semibold text-slate-700 hover:text-brand-500 transition">Daftar Menu Khas</a>
+                <a href="<?= base_url() ?>#filosofi" class="block py-2 text-sm font-semibold text-slate-700 hover:text-brand-500 transition">Filosofi & Sejarah</a>
+                <a href="<?= base_url() ?>#keunggulan" class="block py-2 text-sm font-semibold text-slate-700 hover:text-brand-500 transition">Keunggulan Rasa</a>
+                <div class="pt-2 border-t border-slate-100">
+                    <?php if (session()->get('is_admin')): ?>
+                        <a href="<?= base_url('admin/dashboard') ?>" class="block py-2 text-sm font-bold text-brand-600">Buka Panel Admin &rarr;</a>
+                    <?php else: ?>
+                        <a href="<?= base_url('admin/login') ?>" class="block py-2 text-sm font-bold text-brand-600">Login Admin &rarr;</a>
                     <?php endif; ?>
                 </div>
             </div>

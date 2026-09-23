@@ -14,6 +14,9 @@ class Home extends BaseController
         helper(['url']);
     }
 
+    /**
+     * Menampilkan Landing Page Laksa Benteng Carlendra dengan Filter & Sorting
+     */
     public function index(): string
     {
         $kategori = $this->request->getGet('kategori');

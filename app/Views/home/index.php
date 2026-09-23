@@ -401,4 +401,9 @@
     </div>
 </section>
 
+<!-- Floating Back to Top Button -->
+<a href="#beranda" class="fixed bottom-6 right-6 z-40 p-3.5 rounded-2xl bg-brand-500 hover:bg-brand-600 text-white shadow-xl shadow-brand-500/30 transition transform hover:-translate-y-1 active:scale-95 flex items-center justify-center" title="Kembali ke atas">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+</a>
+
 <?= $this->endSection() ?>

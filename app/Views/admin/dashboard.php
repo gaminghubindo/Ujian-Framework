@@ -93,8 +93,11 @@
                 <h3 class="text-lg font-bold font-heading text-slate-900">Katalog Makanan &amp; Minuman</h3>
                 <p class="text-xs text-slate-500">Daftar lengkap seluruh sajian khas Laksa Benteng Carlendra</p>
             </div>
-            <div class="text-xs text-slate-400">
-                Menampilkan <strong class="text-slate-800"><?= count($menus) ?></strong> item
+            <div class="flex items-center gap-3">
+                <input type="text" id="adminMenuSearch" onkeyup="filterAdminTable()" placeholder="Cari menu di tabel..." class="px-3.5 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500 transition">
+                <span class="text-xs text-slate-400 whitespace-nowrap">
+                    Total: <strong class="text-slate-800"><?= count($menus) ?></strong> item
+                </span>
             </div>
         </div>
 
@@ -211,4 +214,17 @@
         </div>
     </div>
 </div>
+
+<script>
+function filterAdminTable() {
+    const input = document.getElementById('adminMenuSearch');
+    const filter = input.value.toLowerCase();
+    const rows = document.querySelectorAll('tbody tr');
+    
+    rows.forEach(row => {
+        const text = row.innerText.toLowerCase();
+        row.style.display = text.includes(filter) ? '' : 'none';
+    });
+}
+</script>
 <?= $this->endSection() ?>
